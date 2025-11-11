@@ -64,9 +64,32 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contacto</h3>
             <ul className="space-y-2 text-background/80">
-              <li>+506 7209-9038</li>
-              <li>info@dentalcarecr.com</li>
-              <li>www.dentalcarecr.com</li>
+              <li>
+                <a
+                  href="tel:+50672099038"
+                  className="hover:text-primary transition-colors duration-300"
+                >
+                  +506 7209-9038
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:info@dentalcarecr.com"
+                  className="hover:text-primary transition-colors duration-300"
+                >
+                  info@dentalcarecr.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.dentalcarecr.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors duration-300"
+                >
+                  www.dentalcarecr.com
+                </a>
+              </li>
               <li className="text-sm">Heredia, Santo Domingo<br />200m sur Clínica Hugo Fonseca</li>
             </ul>
           </div>
