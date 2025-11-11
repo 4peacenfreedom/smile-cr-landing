@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Globe } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -38,16 +38,10 @@ const Contact = () => {
       link: "mailto:info@dentalcarecr.com",
     },
     {
-      icon: Globe,
-      title: "Sitio Web",
-      content: "www.dentalcarecr.com",
-      link: "https://www.dentalcarecr.com",
-    },
-    {
       icon: MapPin,
       title: "Ubicación",
       content: "Heredia, Santo Domingo, 200m sur Clínica Hugo Fonseca",
-      link: "https://maps.google.com",
+      link: "https://maps.app.goo.gl/4oGc7JvGKCswjNVz5",
     },
   ];
 
@@ -64,7 +58,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div>
             <div className="grid sm:grid-cols-2 gap-6 mb-8">
-              {contactInfo.map((info, index) => (
+              {contactInfo.slice(0, 2).map((info, index) => (
                 <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
@@ -88,11 +82,40 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Map Placeholder */}
+            {/* Location Card - Full Width */}
+            <Card className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300 mb-8">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-primary to-secondary p-3 rounded-lg">
+                    <MapPin className="text-primary-foreground" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-foreground mb-1">{contactInfo[2].title}</h3>
+                    <a
+                      href={contactInfo[2].link}
+                      className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {contactInfo[2].content}
+                    </a>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Google Maps Embed */}
             <Card className="border-0 shadow-md overflow-hidden">
-              <div className="h-64 bg-muted flex items-center justify-center">
-                <MapPin className="text-primary" size={48} />
-              </div>
+              <iframe
+                src="https://maps.google.com/maps?q=9.988873727202762,-84.08862263129815&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación Dental Care Costa Rica"
+              />
             </Card>
           </div>
 
