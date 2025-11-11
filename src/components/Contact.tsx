@@ -107,7 +107,7 @@ const Contact = () => {
             {/* Google Maps Embed */}
             <Card className="border-0 shadow-md overflow-hidden">
               <iframe
-                src="https://maps.google.com/maps?q=9.988873727202762,-84.08862263129815&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6915.190279483503!2d-84.093519!3d9.9886952!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e5267ada84e5%3A0xca4866f8bb74131!2sCl%C3%ADnica%20Dr.%20Hugo%20Fonseca%20Arce!5e1!3m2!1ses!2scr!4v1762885697569!5m2!1ses!2scr"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}
