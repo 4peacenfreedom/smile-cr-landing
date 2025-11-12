@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+import { Heart, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -37,9 +37,32 @@ const Footer = () => {
             <p className="text-background/80 mb-4">
               Tu salud bucal es nuestra prioridad. Tecnología avanzada y atención personalizada.
             </p>
-            <div className="flex items-center gap-2 text-background/90">
+            <div className="flex items-center gap-2 text-background/90 mb-4">
               <Heart size={20} className="text-primary" />
               <span>¡Te esperamos para cuidar de tu sonrisa!</span>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold mb-3">Síguenos</h4>
+              <div className="flex gap-4">
+                <a
+                  href="https://www.facebook.com/JySclinicadentalcare"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-background/80 hover:text-primary transition-colors duration-300"
+                  aria-label="Visita nuestro Facebook"
+                >
+                  <Facebook size={24} />
+                </a>
+                <a
+                  href="https://www.instagram.com/clinicadentalcarecr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-background/80 hover:text-primary transition-colors duration-300"
+                  aria-label="Visita nuestro Instagram"
+                >
+                  <Instagram size={24} />
+                </a>
+              </div>
             </div>
           </div>
 
